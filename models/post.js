@@ -46,7 +46,6 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     } ,
-    likes: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Post',

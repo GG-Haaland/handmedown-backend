@@ -1,25 +1,19 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('posts', {
+    await queryInterface.createTable('comments', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      image: {
-        type: Sequelize.STRING
-      },
       description: {
         type: Sequelize.STRING
       },
-      price: {
-        type: Sequelize.INTEGER
-      },
       userid: {
         type: Sequelize.INTEGER,
-      
+       
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
         reference: {
@@ -27,14 +21,24 @@ module.exports = {
           key: 'id'
         }  
       },
+      postid: {
+        type: Sequelize.INTEGER,
+       
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
+        reference: {
+          model: 'posts',
+          key: 'id'
+        }  
+      },
       createdAt: {
-        field: 'created_at',
+        // field: 'created_at',
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: new Date()
       },
       updatedAt: {
-        field: 'updated_at',
+        // field: 'updated_at',
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: new Date()
@@ -42,6 +46,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('posts');
+    await queryInterface.dropTable('comments');
   }
 };

@@ -28,14 +28,24 @@ module.exports = {
       image: {
         type: Sequelize.STRING
       },
+      postid: {
+        type: Sequelize.INTEGER,
+      
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
+        reference: {
+          model: 'posts',
+          key: 'id'
+        }  
+      },
       createdAt: {
-        field: 'created_at',
+        // field: 'created_at',
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: new Date()
       },
       updatedAt: {
-        field: 'updated_at',
+        // field: 'updated_at',
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: new Date()

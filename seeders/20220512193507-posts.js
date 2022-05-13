@@ -8,8 +8,8 @@ module.exports = {
         description: 'this is a test',
         price: 1000,
         userid: 1,
-        created_at: new Date(),
-        updated_at: new Date()
+        createdAt: new Date(),
+        updatedAt: new Date()
 
       },
       // {

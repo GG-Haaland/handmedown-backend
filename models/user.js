@@ -48,7 +48,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     image: DataTypes.STRING,
-    bio: DataTypes.STRING,
+    
     postid: {
       type: DataTypes.INTEGER,
       onDelete: 'CASCADE',

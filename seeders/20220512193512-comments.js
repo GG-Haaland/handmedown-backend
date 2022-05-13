@@ -7,15 +7,15 @@ module.exports = {
         description: 'Ill give you $150',
         userid: 1,
         postid: 1,
-        created_at: new Date(),
-        updated_at: new Date()
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         description: 'Ill give you $200!!',
         userid: 2,
         postid: 1,
-        created_at: new Date(),
-        updated_at: new Date()
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       //   {
       //   description: 'OMG tell me more!',

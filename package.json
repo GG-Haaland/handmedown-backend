@@ -1,9 +1,11 @@
 {
   "name": "handmedown-backend",
   "version": "1.0.0",
-  "description": "<!-- <div align=\"center\">   <img alt=\"Logo\" src=\"https://yusong.space/wp-content/uploads/2022/05/Ellipse-1.png\" width=\"100\" />   <h6>*Logo not finalized yet<h6> </div> --> <h1 align=\"center\">  HandMeDown  </h1> <p align=\"center\">   The Capstone Project of GA GA SEI Cohort built with <a href=\"https://vuejs.org/\" target=\"_blank\">Vue</a>, <a href=\"https://www.djangoproject.com/\" target=\"_blank\">Django</a> By GJ Haaland </p> <p align=\"center\">   Follow me:   <a href=\"https://www.linkedin.com/in/gj-haaland-b3b131b7/\" target=\"_blank\">LinkedIn</a>,   <a href=\"https://github.com/GG-Haaland\" target=\"_blank\">Github</a>,   <a href=\"https://www.instagram.com/gee_eej/\" target=\"_blank\">Instagram</a> </p> <div align=\"center\">",
+  "description": "capstone project",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +20,14 @@
   },
   "homepage": "https://github.com/GG-Haaland/handmedown-backend#readme",
   "dependencies": {
+    "approuter": "^0.0.1-security",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "middleware": "^1.0.0",
+    "nodemon": "^2.0.16",
     "pg": "^8.7.3",
     "sequelize": "^6.19.0"
   }
