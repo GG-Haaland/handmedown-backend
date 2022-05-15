@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Post.init({
+    title: DataTypes.STRING,
     image: {
       type: DataTypes.STRING,
       allowNull: false },
@@ -46,6 +47,7 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     } ,
+    
   }, {
     sequelize,
     modelName: 'Post',

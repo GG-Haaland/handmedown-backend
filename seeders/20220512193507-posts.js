@@ -4,6 +4,7 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('posts', [
       {
+        title:"Stroller",
         image: 'https://newellbrands.scene7.com/is/image/NewellRubbermaid/STJourney_Tab_InlineImage_SIngleStroller_V1?fmt=png-alpha',
         description: 'this is a test',
         price: 1000,

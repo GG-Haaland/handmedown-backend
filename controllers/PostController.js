@@ -12,6 +12,16 @@ const GetAllPosts = async (req, res) => {
 }
 
 
+const GetPostByPk = async (req, res) => {
+  try {
+      const post = await Post.findByPk(req.params.postid)
+      res.send(post)
+  } catch (error) {
+      throw error
+  }
+}
+
+
 const GetPostDetails = async (req, res) => {
   try {
     const details = await Post.findByPk(
@@ -90,6 +100,7 @@ module.exports = {
     CreatePost,
     UpdatePost,
     DeletePost,
-    GetPostByUser
+    GetPostByUser,
+    GetPostByPk
 
 }
