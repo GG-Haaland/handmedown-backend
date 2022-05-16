@@ -20,6 +20,9 @@ module.exports = {
       price: {
         type: Sequelize.INTEGER
       },
+      email: {
+        type: Sequelize.STRING
+      },
       userid: {
         type: Sequelize.INTEGER,
       

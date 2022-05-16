@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false },
     description: DataTypes.STRING,
     price: DataTypes.INTEGER,
+    email: DataTypes.STRING,
     userid: {
       type: DataTypes.INTEGER,
       onDelete: 'CASCADE',

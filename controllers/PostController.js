@@ -10,6 +10,18 @@ const GetAllPosts = async (req, res) => {
         throw err
     }
 }
+const GetPostById = async (req, res) => {
+  try {
+      const { id } = req.params;
+      const post = await Post.findByPk(id)
+      if (post) {
+          return res.status(200).json({ post });
+      }
+      return res.status(404).send('post with the specified ID does not exists');
+  } catch (error) {
+      return res.status(500).send(error.message);
+  }
+}
 
 
 const GetPostByPk = async (req, res) => {
@@ -101,6 +113,6 @@ module.exports = {
     UpdatePost,
     DeletePost,
     GetPostByUser,
-    GetPostByPk
-
+    GetPostByPk,
+    GetPostById
 }
